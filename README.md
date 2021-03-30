@@ -27,12 +27,10 @@
     - [Disk, disk, sleuth](#disk-disk-sleuth)
     - [Disk, disk, sleuth! II](#disk-disk-sleuth-ii)
   - [Web Exploitation](#web-exploitation)
-    - [Ancient History](#ancient-history)
     - [GET aHEAD](#get-ahead)
     - [Cookies](#cookies)
     - [Scavenger Hunt](#scavenger-hunt)
     - [Some Assembly Required 1](#some-assembly-required-1)
-    - [Who are you?](#who-are-you)
   - [Reverse Engineering](#reverse-engineering)
     - [Transformation](#transformation)
     - [keygenme-py](#keygenme-py)
@@ -171,7 +169,7 @@ First I downloaded the Python file `playfair.py`. Looking at the source code it 
 
 I expanded the square size to 6X6 as this was indicated what we should use in the Python file by: `SQUARE_SIZE = 6`. I then wrote in the alphabet into the matrix.
 
-Next, I connected to teh service and it stated that the encrypted message was: `y7bcvefqecwfste224508y1ufb21ld`. So I inputted that value into the tool and the result was the string `WD9BUKBSPDTJ7SKD3KL8D6OA3F03G0`. Since the other strings were all lowercase I converted the string to lowercase as well using Python.
+Next, I connected to the service and it stated that the encrypted message was: `y7bcvefqecwfste224508y1ufb21ld`. So I inputted that value into the tool and the result was the string `WD9BUKBSPDTJ7SKD3KL8D6OA3F03G0`. Since the other strings were all lowercase I converted the string to lowercase as well using Python.
 
 ![play](https://github.com/Steven-Howe/picoCTF2021/blob/main/picoCTF_screenshots/vmware_5IgqXwXSsj.png)
 
@@ -342,17 +340,6 @@ Flag: `picoCTF{f0r3ns1c4t0r_n0v1c3_0ba8d02d}`
 
 ## Web Exploitation
 
-### Ancient History
-
-`I must have been sleep hacking or something, I don't remember visiting all of these sites... http://mercury.picoctf.net:35111/ (try a couple different browsers if it's not working right`
-
-By visting the above website you're brought to a page that just says `Hello World!`. But looking at the history by pressing `ctrl + h` you can see a flag spelled out in the history.
-
-![ancient](https://github.com/Steven-Howe/picoCTF2021/blob/main/picoCTF_screenshots/P7MRFOGQCN.png)
-
-!!!! FLAG ISN'T RIGHT !!!!
-Flag: `picoCTF{hskn4t_3bed170}`
-
 ### GET aHEAD
 
 `Find the flag being held on this server to get ahead of the competition http://mercury.picoctf.net:47967/`
@@ -409,12 +396,6 @@ I then Looked at the `Network` tab in the Firefox webdeveloper tools. I saw that
 Doing this brought up a dialog box to download the file, which I did. I then used `cat` to examine the contents of the file and at the very end was the flag. I then took this flag and entered it into the original form on the webpage and it returned `Correct!`.
 
 Flag: `picoCTF{8857462f9e30faae4d037e5e25fee1ce}`
-
-### Who are you?
-
-`Let me in. Let me iiiiiiinnnnnnnnnnnnnnnnnnnn http://mercury.picoctf.net:38322/`
-
-When going to the site we are greeted by a message stating `Only people who use the official PicoBrowser are allowed on this site!`.
 
 ## Reverse Engineering
 
